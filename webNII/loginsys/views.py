@@ -14,7 +14,7 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('/homepage/')
+            return redirect('/')
         else:
             return render(request, 'login/index.html', )
             #return render(request, 'login/index.html',)
